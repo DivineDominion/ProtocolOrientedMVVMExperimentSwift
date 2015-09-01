@@ -9,18 +9,21 @@
 import UIKit
 
 struct MinionModeViewModel: SwitchWithTextCellDataSource {
+    
     var title = "Minion Mode!!!"
-    var switchOn = true
+    var switchOn = Dynamic<Bool>(true)
 }
 
 extension MinionModeViewModel: SwitchWithTextCellDelegate {
     
     func onSwitchTogleOn(on: Bool) {
         if on {
-            print("The Minions are here to stay!", appendNewline: false)
+            print("The Minions are here to stay!")
         } else {
-            print("The Minions went out to play!", appendNewline: false)
+            print("The Minions went out to play!")
         }
+        
+        switchOn.value = on
     }
     
     var switchColor: UIColor {

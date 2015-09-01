@@ -8,9 +8,33 @@
 
 import UIKit
 
+class Dynamic<T> {
+    typealias Listener = T -> Void
+    var listener: Listener?
+    
+    func bind(listener: Listener?) {
+        self.listener = listener
+    }
+    
+    func bindAndFire(listener: Listener?) {
+        self.listener = listener
+        listener?(value)
+    }
+    
+    var value: T {
+        didSet {
+            listener?(value)
+        }
+    }
+    
+    init(_ v: T) {
+        value = v
+    }
+}
+
 protocol SwitchWithTextCellDataSource {
     var title: String { get }
-    var switchOn: Bool { get }
+    var switchOn: Dynamic<Bool> { get }
 }
 
 protocol SwitchWithTextCellDelegate {
@@ -53,7 +77,7 @@ class SwitchWithTextTableViewCell: UITableViewCell {
         self.delegate = delegate
         
         label.text = dataSource.title
-        switchToggle.on = dataSource.switchOn
+        switchToggle.on = dataSource.switchOn.value
         // color option added!
         switchToggle.onTintColor = delegate?.switchColor
     }

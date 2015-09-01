@@ -37,6 +37,7 @@ class SettingsViewController: UITableViewController {
                 
                 // this is where the magic happens!
                 let viewModel = MinionModeViewModel()
+                viewModel.switchOn.bind(viewModelSwitchDidChange)
                 cell.configure(withDataSource: viewModel, delegate: viewModel)
                 return cell
             }
@@ -45,4 +46,13 @@ class SettingsViewController: UITableViewController {
         return tableView.dequeueReusableCellWithIdentifier("defaultCell", forIndexPath: indexPath)
     }
 
+    func viewModelSwitchDidChange(on: Bool) {
+        
+        if !on {
+            return
+        }
+        
+        // push View Controller here
+        print("View model toggled: ON (push view controller)")
+    }
 }
