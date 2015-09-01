@@ -17,9 +17,9 @@ extension MinionModeViewModel: SwitchWithTextCellDelegate {
     
     func onSwitchTogleOn(on: Bool) {
         if on {
-            print("The Minions are here to stay!")
+            print("The Minions are here to stay!", appendNewline: false)
         } else {
-            print("The Minions went out to play!")
+            print("The Minions went out to play!", appendNewline: false)
         }
     }
     

@@ -193,6 +193,8 @@
 		FA1F089C1B80B16A00B9C5BC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = NatashaTheRobot;
 				TargetAttributes = {
@@ -489,6 +491,7 @@
 				FA1F08CE1B80B16A00B9C5BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA1F08CF1B80B16A00B9C5BC /* Build configuration list for PBXNativeTarget "MVVMProtocolExperimentTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +500,7 @@
 				FA1F08D11B80B16A00B9C5BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA1F08D21B80B16A00B9C5BC /* Build configuration list for PBXNativeTarget "MVVMProtocolExperimentUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +509,7 @@
 				FA1F08D41B80B16A00B9C5BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
